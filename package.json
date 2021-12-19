@@ -19,5 +19,11 @@
   "homepage": "https://github.com/sonchig271/frontend-project-lvl1#readme",
   "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "readline-sync": "^1.4.10"
   }
 }
