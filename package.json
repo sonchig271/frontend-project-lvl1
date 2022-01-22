@@ -18,12 +18,16 @@
   },
   "homepage": "https://github.com/sonchig271/frontend-project-lvl1#readme",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js"
+
+
   },
   "dependencies": {
-    "eslint": "^8.5.0",
+    "eslint": "^8.7.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.25.4",
     "readline-sync": "^1.4.10"
   }
 }
