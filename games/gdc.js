@@ -11,7 +11,7 @@ const getGCD = (num1, num2) => {
 const gameGCD = () => {
   const name = readlineSync.question('What is your name?: ');
   console.log(`Hello, ${name}`);
-  console.log('Find the greatest common divisor of given numbers.');
+  const rule = 'Find the greatest common divisor of given numbers.';
   let counter = 0;
   let result = true;
   while (result && counter < 3) {
@@ -20,7 +20,7 @@ const gameGCD = () => {
     const secondNumber = getRandomInt();
     const question = `${firstNumber} ${secondNumber}`;
     const rightAnswer = getGCD(firstNumber, secondNumber);
-    result = game(question, name, rightAnswer);
+    result = game(rule, question, rightAnswer);
   }
   if (counter === 3) console.log('Congratulations!');
 };

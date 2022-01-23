@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import game from '../src/index.js';
 
 const getRandomInt = () => Math.floor(1 + Math.random() * 100);
