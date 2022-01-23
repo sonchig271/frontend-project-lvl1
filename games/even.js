@@ -4,18 +4,16 @@ import game from '../src/index.js';
 const getRandomInt = () => Math.floor(1 + Math.random() * 100);
 
 const gameEven = () => {
-  const name = readlineSync.question('What is your name?: ');
-  console.log(`Hello, ${name}`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  let counter = 0;
-  let result = true;
-  while (result && counter < 3) {
-    counter += 1;
+  const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const questions = [];
+  const rightAnswers = [];
+  for (let i = 0; i < 3; i += 1) {
     const question = getRandomInt();
     const rightAnswer = question % 2 === 0 ? 'yes' : 'no';
-    result = game(question, name, rightAnswer);
+    questions.push(question);
+    rightAnswers.push(rightAnswer);
   }
-  if (counter === 3) console.log('Congratulations!');
+  game(rule, questions, rightAnswers);
 };
 
 export default gameEven;
