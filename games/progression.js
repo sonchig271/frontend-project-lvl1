@@ -18,10 +18,10 @@ const getProgression = (start, step, missedIndex) => {
 };
 const gameProgression = () => {
   const rule = 'What number is missing in the progression?';
-  const questions = [];
+  const questions = [];ch
   const rightAnswers = [];
   for (let i = 0; i < 3; i += 1) {
-    const index = getRandomInt(1, 9);
+    const index = getRandomInt(1, 8);
     const [question, rightAnswer] = getProgression(getRandomInt(1, 20), getRandomInt(2, 9), index);
     questions.push(question);
     rightAnswers.push(rightAnswer);
