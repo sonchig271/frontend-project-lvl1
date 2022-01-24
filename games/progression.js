@@ -18,7 +18,7 @@ const getProgression = (start, step, missedIndex) => {
 };
 const gameProgression = () => {
   const rule = 'What number is missing in the progression?';
-  const questions = [];ch
+  const questions = [];
   const rightAnswers = [];
   for (let i = 0; i < 3; i += 1) {
     const index = getRandomInt(1, 8);
