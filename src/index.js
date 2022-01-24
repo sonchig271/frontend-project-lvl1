@@ -20,7 +20,7 @@ const game = (rule, questions, rightAnswers) => {
       return;
     }
     counter += 1;
-    if (counter === 3) console.log('Congratulations!');
+    if (counter === 3) console.log(`Congratulations, ${name}`);
   }
 };
 
