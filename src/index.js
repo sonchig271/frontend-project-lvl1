@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 
 const game = (rule, questions, rightAnswers) => {
-  const name = readlineSync.question('What is your name?: ');
+  const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}`);
   console.log(rule);
   let counter = 0;
