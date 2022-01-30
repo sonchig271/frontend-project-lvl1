@@ -1,6 +1,8 @@
-import game from '../src/index.js';
+import game from '../index.js';
+import getRandomInt from '../getRandomInt.js';
 
-const getRandomInt = (min, max) => Math.floor(min + Math.random() * max);
+const rule = 'What number is missing in the progression?';
+
 const getProgression = (start, step, missedIndex) => {
   const progression = [start];
   let num = start;
@@ -17,7 +19,6 @@ const getProgression = (start, step, missedIndex) => {
   return [progression.join(' '), missed];
 };
 const gameProgression = () => {
-  const rule = 'What number is missing in the progression?';
   const questions = [];
   const rightAnswers = [];
   for (let i = 0; i < 3; i += 1) {
