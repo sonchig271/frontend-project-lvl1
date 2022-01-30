@@ -17,7 +17,7 @@ const gamePrime = () => {
   const questions = [];
   const rightAnswers = [];
   for (let i = 0; i < 3; i += 1) {
-    const question = getRandomInt();
+    const question = getRandomInt(1, 100);
     const rightAnswer = isPrime(question) ? 'yes' : 'no';
     questions.push(question);
     rightAnswers.push(rightAnswer);
