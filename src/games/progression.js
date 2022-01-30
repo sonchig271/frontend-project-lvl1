@@ -23,8 +23,10 @@ const gameProgression = () => {
   const rightAnswers = [];
   for (let i = 0; i < 3; i += 1) {
     const index = getRandomInt(1, 8);
-    const question = getProgression(getRandomInt(1, 20), getRandomInt(2, 9), index);
-    const rightAnswer = getMissingTerm(getRandomInt(1, 20), getRandomInt(2, 9), index);
+    const start = getRandomInt(1, 20);
+    const step = getRandomInt(2, 9);
+    const question = getProgression(start, step, index);
+    const rightAnswer = getMissingTerm(start, step, index);
     questions.push(question);
     rightAnswers.push(rightAnswer);
   }

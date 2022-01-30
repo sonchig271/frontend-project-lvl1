@@ -2,9 +2,7 @@ import game from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-const getRightAnswer = (question) => {
-  return question % 2 === 0 ? 'yes' : 'no';
-};
+const getRightAnswer = (question) => (question % 2 === 0 ? 'yes' : 'no');
 const gameEven = () => {
   const questions = [];
   const rightAnswers = [];
