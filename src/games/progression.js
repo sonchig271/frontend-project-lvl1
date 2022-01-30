@@ -6,7 +6,7 @@ const rule = 'What number is missing in the progression?';
 const getProgression = (start, step, missedIndex) => {
   const progression = [start];
   let num = start;
-  for (let i = 1; i < 8; i += 1) {
+  for (let i = 1; i < 9; i += 1) {
     num += step;
     if (i === missedIndex) {
       progression.push('..');
@@ -16,6 +16,7 @@ const getProgression = (start, step, missedIndex) => {
   }
   return progression.join(' ');
 };
+
 const getMissingTerm = (start, step, index) => start + step * index;
 
 const gameProgression = () => {
