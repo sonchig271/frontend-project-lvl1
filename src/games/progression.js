@@ -3,21 +3,20 @@ import getRandomInt from '../getRandomInt.js';
 
 const rule = 'What number is missing in the progression?';
 
+const getMissingTerm = (start, step, index) => start + step * index;
+
 const getProgression = (start, step, missedIndex) => {
-  const progression = [start];
-  let num = start;
-  for (let i = 1; i < 9; i += 1) {
-    num += step;
+  const progression = [];
+  for (let i = 0; i < 9; i += 1) {
+    const currentEl = getMissingTerm(start, step, i);
     if (i === missedIndex) {
       progression.push('..');
     } else {
-      progression.push(num);
+      progression.push(currentEl);
     }
   }
   return progression.join(' ');
 };
-
-const getMissingTerm = (start, step, index) => start + step * index;
 
 const gameProgression = () => {
   const questions = [];
