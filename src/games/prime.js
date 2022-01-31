@@ -1,4 +1,4 @@
-import game from '../index.js';
+import game, { rounds } from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -15,14 +15,12 @@ const isPrime = (number) => {
 };
 const gamePrime = () => {
   const questions = [];
-  const rightAnswers = [];
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < rounds; i += 1) {
     const question = getRandomInt(1, 100);
     const rightAnswer = isPrime(question) ? 'yes' : 'no';
-    questions.push(question);
-    rightAnswers.push(rightAnswer);
+    questions.push({ question, rightAnswer });
   }
-  game(rule, questions, rightAnswers);
+  game(rule, questions);
 };
 
 export default gamePrime;

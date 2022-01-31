@@ -1,4 +1,4 @@
-import game from '../index.js';
+import game, { rounds } from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const signs = ['+', '-', '*'];
@@ -12,21 +12,20 @@ const getRightAnswer = (firstNumber, secondNumber, sign) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      return null;
+      throw new Error('Wrong sign');
   }
 };
+
 const gameCalc = () => {
   const questions = [];
-  const rightAnswers = [];
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < rounds; i += 1) {
     const index = getRandomInt(0, 2);
     const firstNumber = getRandomInt(1, 100);
     const secondNumber = getRandomInt(1, 10);
     const question = `${firstNumber} ${signs[index]} ${secondNumber} `;
-    const rightAnswer = getRightAnswer(firstNumber, secondNumber, signs[index]);
-    questions.push(question);
-    rightAnswers.push(rightAnswer);
+    const rightAnswer = getRightAnswer(firstNumber, secondNumber, signs[index]).toString();
+    questions.push({ question, rightAnswer });
   }
-  game(rule, questions, rightAnswers);
+  game(rule, questions);
 };
 export default gameCalc;
