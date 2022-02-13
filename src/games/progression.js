@@ -1,4 +1,4 @@
-import game, { rounds } from '../index.js';
+import playGame, { roundsCount } from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const rule = 'What number is missing in the progression?';
@@ -17,7 +17,7 @@ const getProgression = (start, step, missedIndex, length = progressionLength) =>
 
 const gameProgression = () => {
   const questions = [];
-  for (let i = 0; i < rounds; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const index = getRandomInt(1, progressionLength - 1);
     const step = getRandomInt(2, 9);
     const start = getRandomInt(2, 9);
@@ -25,7 +25,7 @@ const gameProgression = () => {
     const rightAnswer = getProgressionTerm(start, step, index).toString();
     questions.push({ question, rightAnswer });
   }
-  game(rule, questions);
+  playGame(rule, questions);
 };
 
 export default gameProgression;
