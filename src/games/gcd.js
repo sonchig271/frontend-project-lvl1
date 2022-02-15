@@ -8,16 +8,16 @@ const getGCD = (num1, num2) => {
   }
   return getGCD(num2, num1 % num2);
 };
-const gameGCD = () => {
-  const questions = [];
+const playGCD = () => {
+  const rounds = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const firstNumber = getRandomInt(1, 20);
     const secondNumber = getRandomInt(1, 20);
     const question = `${firstNumber} ${secondNumber}`;
     const rightAnswer = getGCD(firstNumber, secondNumber).toString();
-    questions.push({ question, rightAnswer });
+    rounds.push({ question, rightAnswer });
   }
-  playGame(rule, questions);
+  playGame(rule, rounds);
 };
 
-export default gameGCD;
+export default playGCD;

@@ -16,16 +16,16 @@ const calculate = (firstNumber, secondNumber, sign) => {
   }
 };
 
-const gameCalc = () => {
-  const questions = [];
+const playCalc = () => {
+  const rounds = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const index = getRandomInt(0, signs.length - 1);
     const firstNumber = getRandomInt(1, 10);
     const secondNumber = getRandomInt(1, 10);
     const question = `${firstNumber} ${signs[index]} ${secondNumber} `;
     const rightAnswer = calculate(firstNumber, secondNumber, signs[index]).toString();
-    questions.push({ question, rightAnswer });
+    rounds.push({ question, rightAnswer });
   }
-  playGame(rule, questions);
+  playGame(rule, rounds);
 };
-export default gameCalc;
+export default playCalc;

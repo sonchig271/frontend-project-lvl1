@@ -15,17 +15,17 @@ const getProgression = (start, step, missedIndex, length = progressionLength) =>
   return progression.join(' ');
 };
 
-const gameProgression = () => {
-  const questions = [];
+const playProgression = () => {
+  const rounds = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const index = getRandomInt(1, progressionLength - 1);
     const step = getRandomInt(2, 9);
     const start = getRandomInt(2, 9);
     const question = getProgression(start, step, index);
     const rightAnswer = getProgressionTerm(start, step, index).toString();
-    questions.push({ question, rightAnswer });
+    rounds.push({ question, rightAnswer });gaa
   }
-  playGame(rule, questions);
+  playGame(rule, rounds);
 };
 
-export default gameProgression;
+export default playProgression;

@@ -13,14 +13,14 @@ const isPrime = (number) => {
   }
   return true;
 };
-const gamePrime = () => {
-  const questions = [];
+const playPrime = () => {
+  const rounds = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const question = getRandomInt(1, 100);
     const rightAnswer = isPrime(question) ? 'yes' : 'no';
-    questions.push({ question, rightAnswer });
+    rounds.push({ question, rightAnswer });
   }
-  playGame(rule, questions);
+  playGame(rule, rounds);
 };
 
-export default gamePrime;
+export default playPrime;
