@@ -23,7 +23,7 @@ const playProgression = () => {
     const start = getRandomInt(2, 9);
     const question = getProgression(start, step, index);
     const rightAnswer = getProgressionTerm(start, step, index).toString();
-    rounds.push({ question, rightAnswer });gaa
+    rounds.push({ question, rightAnswer });
   }
   playGame(rule, rounds);
 };
