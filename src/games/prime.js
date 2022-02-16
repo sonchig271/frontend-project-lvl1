@@ -2,6 +2,7 @@ import playGame, { roundsCount } from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 const isPrime = (number) => {
   if (number < 2) {
     return false;

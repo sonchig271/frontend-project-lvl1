@@ -2,6 +2,7 @@ import playGame, { roundsCount } from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
+
 const getGCD = (num1, num2) => {
   if (num2 === 0) {
     return num1;

@@ -3,6 +3,7 @@ import getRandomInt from '../getRandomInt.js';
 
 const signs = ['+', '-', '*'];
 const rule = 'What is the result of the expression?';
+
 const calculate = (firstNumber, secondNumber, sign) => {
   switch (sign) {
     case '+':

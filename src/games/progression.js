@@ -2,10 +2,9 @@ import playGame, { roundsCount } from '../index.js';
 import getRandomInt from '../getRandomInt.js';
 
 const rule = 'What number is missing in the progression?';
-
-const getProgressionTerm = (start, step, index) => start + step * index;
 const progressionLength = 9;
 
+const getProgressionTerm = (start, step, index) => start + step * index;
 const getProgression = (start, step, missedIndex, length = progressionLength) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
